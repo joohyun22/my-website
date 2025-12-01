@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤지크★</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../image2/background8.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(13, 83, 103);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff199b;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+
+
+        .left-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .flip-container {
+            perspective: 1200px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .flip-card {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* Square aspect ratio */
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease-in-out;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-container:hover .flip-card {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .flip-card-front {
+            background: url('../image2/music.webp') center/cover;
+        }
+
+        .flip-card-back {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transform: rotateY(180deg);
+            text-align: left;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight: bold;
+            overflow-y: auto;
+        }
+
+        .flip-card-back p {
+            line-height: 1.8;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            color: #f3f3f3;
+            margin: 0;
+        }
+
+        audio {
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-container {
+            width: 50%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="left-container">
+        <div class="title">Stephen Sanchez - Until I Found You</div>
+        <div class="flip-container">
+            <div class="flip-card">
+                <div class="flip-card-front"></div>
+                <div class="flip-card-back">
+                    <p>
+Georgia, wrap me up in all your
+I want you in my arms
+Oh, let me hold you
+I'll never let you go again like I did
+Oh, I used to say
+I would never fall in love again until I found her
+I said, "I would never fall unless it's you I fall into"
+I was lost within the darkness, but then I found her
+I found you
+Georgia, pulled me in, I asked to
+Love her once again
+You fell, I caught you
+I'll never let you go again like I did
+Oh, I used to say
+I would never fall in love again until I found her
+I said, "I would never fall unless it's you I fall into"
+I was lost within the darkness, but then I found her
+I found you
+I would never fall in love again until I found her
+I said, "I would never fall unless it's you I fall into"
+I was lost within the darkness, but then I found her
+I found you
+                    </p>
+                </div>
+            </div>
+        </div>
+        <audio controls autoplay>
+            <source src="../image2/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+
+   
+        <button class="back-button" onclick="goBack()">
+        <span class="back-button-icon">←</span>
+        <a href = "index.html"></a>
+    </button>
+
+
+    </div>
+    <div class="right-container">
+        <!-- Add content for the right container if needed -->
+    </div>
+    <script>
+
+
+        // Optional: Smooth flip animation improvements can be added here if needed
+        
+        
+        function goBack() {
+            window.history.back();
+        }
+
+
+    </script>
+</body>
+</html>

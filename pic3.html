@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>냠냠티비★</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../image2/background6.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(72, 13, 103);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff199b;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 70px; /* Added spacing between image blocks */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div class="title"> 시험기간 2주간 벌어진 일..0o0
+            <div>ㅤ</div>
+         
+            
+        </div> <!-- Added title section -->
+
+        <!-- Example of one image block -->
+        <div class="image-container">
+            <img src="../image2/3.jpg" alt="Image Description">
+            <p> 귀여운 것들 먹기.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_2.jpg" alt="Image Description">
+            <p> 우와..또 먹고 싶다..</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_3.jpg" alt="Image Description">
+            <p> 밀터가서 </p>
+            <p> 면 리필 2번 했다 ㅋ (뿌듯)</p>
+            <p> (but. 내 지분은 좀 없긴하다..ㅎㅎ)</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_4.jpg" alt="Image Description">
+            <p>맥주는 맛있덩</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_5.jpg" alt="Image Description">
+            <p>3단계 뼈해장국</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_6.jpg" alt="Image Description">
+            <p>너무너무너무좋다</p>
+            <p>아이스크림기계뺏어오고싶은맛</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_7.jpg" alt="Image Description">
+            <p>둘이가서 치킨이랑 묵은지닭찜(이었나..?) 다 먹기 챌린지</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_8.jpg" alt="Image Description">
+            <p>레전드!!</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/3_9.jpg" alt="Image Description">
+            <p>시험 2일차에 양꼬치 먹고</p>
+        </div>
+
+   
+        <div class="image-container">
+            <img src="../image2/3_11.jpg" alt="Image Description">
+            <p>편의점 한 번 털었다.</p>
+        </div>
+
+
+        <div class="image-container">
+            <img src="../image2/3_12.jpg" alt="Image Description">
+            <div>시험 4일차에 또 양꼬치 먹었다.ㅤ</div>
+            <div>그래도 맛도리!ㅤ</div>
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+            <p>끝!</p>
+            <div>ㅤ</div>
+        <div>ㅤ</div>
+         
+
+        </div>
+
+
+
+        <audio id="background-audio" autoplay loop>
+            <source src="../image2/pic8.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+
+  
+        <button class="back-button" onclick="goBack()">
+        <span class="back-button-icon">←</span>
+        <a href = "index.html"></a>
+    </button>
+
+        <!-- Repeat as needed -->
+    </div>
+
+
+    <script>
+        // Ensure audio plays automatically
+        const audio = document.getElementById('background-audio');
+           audio.play();
+   
+
+           function goBack() {
+            window.history.back();
+        }
+
+
+   </script>
+
+
+</body>
+</html>

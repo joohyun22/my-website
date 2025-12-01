@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행중..</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../image2/background5.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center; /* 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column; /* 위아래로 정렬 */
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(47, 48, 108);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff199b;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+
+        .center-text {
+            font-size: 5em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center; /* 가운데 정렬 */
+            animation: glowing 3s infinite;
+        }
+
+        .sub-text {
+            font-size: 2em;
+            color: white;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            text-align: center; /* 가운데 정렬 */
+        }
+
+        .additional-text {
+            font-size: 1em;
+            color: lightgray;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+            text-align: center; /* 가운데 정렬 */
+        }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
+            50% { text-shadow: 0 0 20px #fff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff, 0 0 70px #00ffff; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-text">일본에서 여행중...</div>
+    <div class="sub-text">자세한 일본여행 이야기는 홈으로 돌아가<br> [멉빵] 과 [추억] 카테고리를 선택해주세요!</div>
+    <!--<div class="additional-text">매일 새로운 이야기를 기대해주세요!</div>-->
+
+   
+    <button class="back-button" onclick="goBack()">
+    <span class="back-button-icon">←</span>
+    <a href = "index.html"></a>
+</button>
+
+
+<script>  function goBack() {
+    window.history.back();}
+</script>
+
+</body>
+</html>

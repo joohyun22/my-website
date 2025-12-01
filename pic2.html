@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산타극장★</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../image2/pic2.gif'); /* 여기에 원하는 이미지 URL을 넣으세요 */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(13, 103, 58);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff1919;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 3em; /* 제목 크기 */
+            padding: 20px;
+            background: rgba(15, 88, 10, 0.8); /* 반투명 배경 */
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* 둥글고 두꺼운 폰트 */
+            margin-bottom: 20px; /* 영상과 간격 추가 */
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 180px); /* 상단 header를 제외한 공간 */
+        }
+        .content video {
+            max-width: 80%;
+            max-height: 80%;
+            /*border: 4px solid rgb(244, 40, 40);*/
+            border-radius: 15px; /* 모서리 둥글게 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10%;
+            color: white;
+            font-size: 1.5em;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%) rotate(0deg);
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        "크리스마스 극장"
+    </header>
+    <div class="content">
+        <video controls autoplay>
+            <source src="../image2/Snowman.mp4" type="video/mp4">
+            브라우저가 비디오 태그를 지원하지 않습니다.
+        </video>
+    </div>
+    <div class="snowflakes" id="snowflakes"></div>
+
+
+    //뒤로가기
+    <button class="back-button" onclick="goBack()">
+    <span class="back-button-icon">←</span>
+    <a href = "index.html"></a>
+</button>
+
+    <script>
+        // Snowflake 효과 추가
+        const snowflakesContainer = document.getElementById('snowflakes');
+        const snowflakeCount = 50; // 눈송이 개수
+
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 3 + 's';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            snowflakesContainer.appendChild(snowflake);
+        }
+
+
+        function goBack() {
+            window.history.back();
+        }
+
+
+    </script>
+</body>
+</html>

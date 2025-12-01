@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추억티비★</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../image2/background4.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(154, 164, 127);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff199b;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.6); /* 투명도 50% 적용 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 120px; /* Added spacing between image blocks */
+        }
+
+        .image-container img {
+            background-color: rgba(255, 255, 255, 0.5);
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .image-container p {
+            /*background-color: rgba(169, 164, 164, 0.5);*/
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div class="title"> <h2>추억핑 ●̑ᴗ●̑</h2>
+            <div>ㅤ</div>
+        </div> <!-- Added title section -->
+
+        <!-- Example of one image block -->
+        <div class="image-container">
+            <img src="../image2/9.jpg" width = "500"alt="Image Description">
+            <p>출발티비</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_1.jpg" alt="Image Description">
+            <p>1일차</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_2.jpg" alt="Image Description">
+    
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_3.jpg" alt="Image Description">
+        
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_4.jpg" alt="Image Description">
+       
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_5.jpg" alt="Image Description">
+            <p>2일차</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_6.jpg" alt="Image Description">
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_7.jpg" alt="Image Description">
+           
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_8.jpg" alt="Image Description">
+            
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_9.jpg" alt="Image Description">
+    
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_10.jpg" alt="Image Description">
+          
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/9_11.jpg" alt="Image Description">
+            <p>3일차</p>
+        </div>
+
+
+        <div class="image-container">
+            <img src="../image2/9_12.jpg" width="600" alt="Image Description">
+    
+        </div>
+
+
+        <div class="image-container">
+            <img src="../image2/9_13.jpg" alt="Image Description">
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+            <p>끝끝!!!!</p>
+            <div>ㅤ</div>
+            <div>ㅤ</div>
+        </div>
+
+
+        <audio id="background-audio" autoplay loop>
+            <source src="../image2/pic9.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+  
+        <button class="back-button" onclick="goBack()">
+        <span class="back-button-icon">←</span>
+        <a href = "index.html"></a>
+    </button>
+
+
+        <!-- Repeat as needed -->
+    </div>
+</body>
+
+
+<script>
+// Ensure audio plays automatically
+        const audio = document.getElementById('background-audio');
+        audio.play();
+
+
+        function goBack() {
+            window.history.back();
+        }
+</script>
+
+</html>

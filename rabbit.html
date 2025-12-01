@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뚱이랑동순이</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../image2/background3.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(34, 3, 58);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff199b;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+        .banner {
+            width: 100%;
+            height: 50px;
+            background: url('../image2/hopi.jpg') repeat-x;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            height: 90%;
+            gap: 2%;
+        }
+        .left, .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 1;
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+            position: relative;
+            top: 0;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: bold; /* 글자 두께 설정 */
+        }
+        .main-image {
+            max-width: 100%;
+            max-height: 40%;
+            margin-bottom: 30px;
+            border: 3px solid white;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            position: relative;
+            top: -350px;
+            left: 0;
+        }
+
+        .gallery img {
+            width: 150%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 5px;
+            object-fit: contain;
+            text-align: center;
+        }
+
+        .gallery-item {
+            text-align: center; /* 텍스트 가운데 정렬 */
+        }
+
+        .gallery-item img {
+            margin-bottom: 5px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item div {
+            margin-top: 5px;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        .description {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="container">
+        <div class="left">
+            <div class="top">
+                <div class="title">뚱이!!!</div>
+                <img src="../image2/rabbit.jpg" alt="Left Main Image" class="main-image"></div>
+            <div><pr>뚱이는 동순이 친구</pr></div>
+            <div class="bottom">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit2.jpg" alt="Left Gallery Image 1">
+                        <div>딸기 먹방 뚱이</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit3.jpg" alt="Left Gallery Image 2">
+                        <div>그냥뚱</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit4.jpg" alt="Left Gallery Image 3">
+                        <div>그냥뚱2</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit5.jpg" alt="Left Gallery Image 4">
+                        <div>발&발&발&발</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit.jpg" alt="Left Gallery Image 5">
+                        <div>순순뚱</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/rabbit6.jpg" alt="Left Gallery Image 6">
+                        <div>핑크 코</div>
+                    </div>
+                </div>
+                <div class="description">뚱이는 지금 열한살~!!</div>
+            </div>
+        </div>
+
+
+
+        
+        <div class="right">
+            <div class="top">
+                <div class="title">동순이 ‪ᕱ‬ ‪ᕱ‬<pr></pr></div>
+                <img src="../image2/dong2.jpg" alt="Right Main Image" class="main-image">
+                <div><pr>동순이는 뚱이 친구</pr></div>
+            </div>
+            <div class="bottom">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../image2/dong3.jpg" alt="Right Gallery Image 1">
+                        <div>그냥 귀여운 동순</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/dong4.jpg" alt="Right Gallery Image 2">
+                        <div>코 입 동순</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/dong5.jpg" alt="Right Gallery Image 3">
+                        <div>행운 가득 동순</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/dong.jpg" alt="Right Gallery Image 4">
+                        <div>뚱뚱 동순</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/dong6.jpg" alt="Right Gallery Image 5">
+                        <div>철--푸-덕</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../image2/dong2.jpg" alt="Right Gallery Image 6">
+                        <div>동글 동순</div>
+                    </div>
+                </div>
+                <div class="description">내 최애는 철--푸--덕 동순이</div>
+            </div>
+        </div>
+    </div>
+
+
+    <audio id="background-audio" autoplay loop>
+      <source src="../image2/supermariobgm.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+
+
+
+  <button class="back-button" onclick="goBack()">
+  <span class="back-button-icon">←</span>
+  <a href = "index.html"></a>
+</button>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeIn = (elements, duration) => {
+                elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.opacity = 1;
+                    }, index * (duration / elements.length));
+                });
+            };
+
+            const leftTitle = document.querySelector(".left .title");
+            const leftMainImage = document.querySelector(".left .main-image");
+            const leftGallery = document.querySelectorAll(".left .gallery img");
+
+            const rightTitle = document.querySelector(".right .title");
+            const rightMainImage = document.querySelector(".right .main-image");
+            const rightGallery = document.querySelectorAll(".right .gallery img");
+
+            [leftTitle, leftMainImage, rightTitle, rightMainImage].forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = "opacity 1.5s";
+            });
+
+            leftGallery.forEach(img => {
+                img.style.opacity = 0;
+                img.style.transition = "opacity 1.5s";
+            });
+
+            rightGallery.forEach(img => {
+                img.style.opacity = 0;
+                img.style.transition = "opacity 1.5s";
+            });
+
+            setTimeout(() => {
+                leftTitle.style.opacity = 1;
+                leftMainImage.style.opacity = 1;
+                rightTitle.style.opacity = 1;
+                rightMainImage.style.opacity = 1;
+            }, 100);
+
+            setTimeout(() => {
+                fadeIn([...leftGallery, ...rightGallery], 2000);
+            }, 1500);
+        });
+
+
+         // Ensure audio plays automatically
+         const audio = document.getElementById('background-audio');
+        audio.play();
+
+
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</body>
+</html>

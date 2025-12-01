@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주련★</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      margin: 0;
+      background-image: url('../image2/spongebackground4.jpg'); /* 새로운 배경 이미지 설정 */
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .header-images {
+      display: flex;
+      justify-content: space-around; /* 이미지를 균등 간격으로 배치 */
+      align-items: center;
+      padding: 20px 0;
+      /*position: fixed;*/
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .header-images img {
+      width: 900px; /* 이미지 크기 확대 */
+      height: auto;
+    }
+
+    .container {
+      width: 60%; /* 비율 유지하며 박스 크기 조정 */
+      max-width: 1120px;
+      margin: 0px auto 60px; /* 상단 이미지 높이 고려한 여백 추가 */
+      background-image: url('../image2/background3.gif'); /* 박스 내부 배경 이미지 */
+      background-size: cover;
+      border: 2px solid #ff42a7;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      background: #ff42a7;
+      padding: 10px 0;
+      gap: 15px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #323232;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .nav a.active {
+      background-color: #6ee2ff;
+    }
+
+    .nav a:hover {
+      background-color: #ffea82;
+    }
+
+    .profile-section {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .profile {
+      width: 53%; /* 프로필과 방명록 동일한 크기로 설정 */
+      text-align: center;
+      border-right: 2px solid #4dffff;
+      padding: 20px;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      margin-bottom: 40px;
+      border: 3px solid #a03b87;
+    }
+
+    .profile .info {
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .profile .music-player {
+      margin-top: 70px;
+    }
+
+    .gallery {
+      width: 70%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 10px;
+    }
+
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .gallery caption {
+      font-size: 0.9rem;
+      color: #ffffff;
+      color: #ffffff !important;
+    }
+
+    .gallery-item figcaption {
+  font-size: 0.9rem;
+  color: #ffffff !important;
+}
+
+
+    .guestbook-container {
+      width: 60%; /* 프로필과 동일한 가로 길이 설정 */
+      margin: 20px auto;
+      background-image: url('../image2/background2.gif');
+      background-color: white; /* 방명록 배경 색상 */
+      border-radius: 15px;
+      border: 2px solid #d4b483;
+      padding: 20px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      text-align: center; /* 글자 가운데 정렬 */
+    }
+
+    .guestbook h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2cd5ff;
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+    .guestbook textarea {
+      width: 95%;
+      height: 80px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .guestbook button {
+      display: block;
+      margin: 0 auto; /* 가운데 정렬 */
+      background-color: #f3a5e6;
+      color: #4a4a4a;
+      border-color: #a57019;
+      border-width: 3px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .guestbook .messages {
+      margin-top: 20px;
+    }
+
+    .guestbook .message {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      background-color: rgb(197, 255, 250); /* 등록된 메시지 배경 색상 */
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .popup .popup-header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .popup .popup-content {
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup button {
+      display: block;
+      margin: 0 auto;
+      background-color: #f3a5e6;
+      color: #4a4a4a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .popup button:hover {
+      background-color: #ffea82;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-images">
+    <img src="../image2/welcome.gif" alt="Image 1">
+    <img src="../image2/welcome.gif" alt="Image 2">
+    <img src="../image2/welcome.gif" alt="Image 3">
+  </div>
+
+  <div class="container">
+    <div class="nav">
+      <a href="index.html" class="active">프로필</a>
+      <a href="gallery.html"> 하고싶은것들</a>
+      <a href="music.html">주크박스</a>
+      <a href="#" onclick="showPopup()">금주의 표어</a>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile">
+        <img src="../image2/profile.jpg" alt="프로필 사진">
+        <div class="info">
+            <p> @jv.hyxn</p>
+          <p><strong>이름:</strong> 주현</p>
+        
+          <p><strong>상태 메시지:</strong> 달콤 쌉싸름한 하루</p>
+          <div class="music-player">
+            <audio controls autoplay>
+              <source src="../image2/LunchMoney Lewis - Bills (Official Audio).mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item">
+            <a href="pic1.html"><img src="../image2/pic2.jpg" alt="사진 1"></a>
+          <figcaption>돌아가고싶.</figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="pic2.html"><img src="../image2/pic4.jpg" alt="사진 2"></a>
+          <figcaption>크!리!스!마!스!</figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="pic3.html"><img src="../image2/pic6.jpg" alt="사진 3"></a>
+          <figcaption>시험기간에 벌어진 일..0o0</figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="ddung.html"><img src="../image2/rabbit.jpg" alt="사진 4"></a>
+          <figcaption>몬생긴 뚱이</figcaption>
+        </div>
+        
+
+        <!--뚱이-->
+        <div class="gallery-item">
+            <a href="rabbit.html"><img src="../image2/love.jpg" alt="사진 5"></a>
+          <figcaption>ㄷㅅ & ㄸㅇ</figcaption>
+        </div>
+
+
+
+        <div class="gallery-item">
+            <a href="dong.html"><img src="../image2/dongdong.jpg" alt="사진 6"></a>
+          <figcaption>뚠뚠한 동순</figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="pic7.html"><img src="../image2/pic7.jpg" alt="사진 7"></a>
+          <figcaption>여행 중..</figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="pic8.html"><img src="../image2/pic8.jpg" alt="사진 8"></a>
+          <figcaption>멉빵! </figcaption>
+        </div>
+        <div class="gallery-item">
+            <a href="pic9.html"><img src="../image2/pic9.jpg" alt="사진 9"></a>
+          <figcaption>추억</figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guestbook-container">
+    <div class="guestbook">
+      <h2>[방명록]</h2>
+      <textarea id="guestbookInput" placeholder="방명록에 메시지를 남겨주세요."></textarea>
+      <button onclick="addMessage()">등록</button>
+
+      <div class="messages" id="guestbookMessages">
+        <div class="message">홈페이지 방문을 환!영! 합니다</div>
+        <div class="message">방명록을 남기면 이곳에 표시됩니다!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="popup" id="popup">
+    <div class="popup-header">~금주의 표어~</div>
+    <div class="popup-content">
+      <p><strong>"힘들 때 힘들다고 말하는 용기"</strong></p>
+      <p>의지하는 것을 두려워 말자</p>
+    </div>
+    <button onclick="closePopup()">닫기</button>
+  </div>
+
+  <script>
+    function addMessage() {
+      const input = document.getElementById('guestbookInput');
+      const messages = document.getElementById('guestbookMessages');
+
+      if (input.value.trim() !== '') {
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('message');
+        newMessage.textContent = input.value;
+        messages.appendChild(newMessage);
+
+        input.value = '';
+      } else {
+        alert('메시지를 입력해주세요!');
+      }
+    }
+
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

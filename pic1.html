@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햅삐★</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../image2/spongebackground4.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(18, 88, 126);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ff23a0;
+            transform: scale(1.1);
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .back-button-icon {
+            font-size: 22px;
+            font-weight:bolder;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 70px; /* Added spacing between image blocks */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>ㅤ</div>
+        <div>ㅤ</div>
+        <div class="title"> 글램핑 냠냠핑 @__@
+            <div>ㅤ</div>
+         
+            
+        </div> <!-- Added title section -->
+
+        <!-- Example of one image block -->
+        <div class="image-container">
+            <img src="../image2/1.jpg" alt="Image Description">
+            <p>시험을 2주 남기고...출발티비</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_2.jpg" alt="Image Description">
+            <p>처음봄. 탐난다. </p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_3.jpg" alt="Image Description">
+            <p> 사람은 둘인데..</p>
+            <p> 이제 음료수 3병을 곁들인..</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_4.jpg" alt="Image Description">
+            <p>우와...이것.. 뭐예요?</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_5.jpg" alt="Image Description">
+            <p>비빔면 3개 끓여오기 미션.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_6.jpg" alt="Image Description">
+            <p>//^^//</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_7.jpg" alt="Image Description">
+            <p>이것 뭐예요???</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_8.jpg" alt="Image Description">
+            <p>후식티비</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_9.jpg" alt="Image Description">
+            <p>최선을 다했다..ㅋ</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_10.jpg" alt="Image Description">
+            <p>내가 21살에 루미큐브 100원에서 1000원을 딸 수 있었던 이유</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../image2/1_11.jpg" alt="Image Description">
+            <p>사이좋게 노나 먹기</p>
+        </div>
+
+
+        <div class="image-container">
+            <img src="../image2/1_13.jpg" alt="Image Description">
+            <div>ㅤ</div>
+        <div>ㅤ</div>
+            <p>끄읏!</p>
+            <div>ㅤ</div>
+        <div>ㅤ</div>
+         
+
+        </div>
+
+        <audio id="background-audio" autoplay loop>
+            <source src="../image2/pic9.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+
+        <button class="back-button" onclick="goBack()">
+        <span class="back-button-icon">←</span>
+        <a href = "index.html"></a>
+    </button>
+
+        <!-- Repeat as needed -->
+    </div>
+</body>
+
+
+
+<script>
+     // Ensure audio plays automatically
+     const audio = document.getElementById('background-audio');
+        audio.play();
+
+
+        function goBack() {
+            window.history.back();
+        }
+
+</script>
+
+
+</html>
